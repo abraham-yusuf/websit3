@@ -1,4 +1,5 @@
 import { fileURLToPath } from 'node:url'
+import path from 'node:path'
 import bundleAnalyzer from '@next/bundle-analyzer'
 import { createMDX } from 'fumadocs-mdx/next'
 import type { NextConfig } from 'next'
@@ -31,6 +32,21 @@ async function createNextConfig(): Promise<NextConfig> {
       'shiki',
       '@takumi-rs/image-response',
     ],
+    turbopack: {
+      resolveAlias: {
+        transliteration: 'transliteration/dist/browser/bundle.esm.min.js',
+      },
+    },
+    webpack: (config) => {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        transliteration: path.resolve(
+          process.cwd(),
+          'node_modules/transliteration/dist/browser/bundle.esm.min.js'
+        ),
+      }
+      return config
+    },
     images: {
       remotePatterns: [
         {

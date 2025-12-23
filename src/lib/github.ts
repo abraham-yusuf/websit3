@@ -1,2 +1,2 @@
-export const owner = 'techwithanirudh'
-export const repo = 'fumadocs-starter'
+export const owner = 'abraham-yusuf'
+export const repo = 'websit3'

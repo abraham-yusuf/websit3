@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic'
 import type { ReactNode } from 'react'
 import { TooltipProvider } from '@/components/ui/tooltip'
 
+
 const SearchDialog = dynamic(() => import('@/components/search'), {
   ssr: false,
 })

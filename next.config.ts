@@ -56,7 +56,7 @@ async function createNextConfig(): Promise<NextConfig> {
         },
         {
           protocol: 'https',
-          hostname: 'fumadocs.dev',
+          hostname: 'web3idn-fi.vercel.app',
           port: '',
         },
       ],

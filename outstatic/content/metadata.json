@@ -1,11 +1,11 @@
 {
-  "commit": "",
-  "generated": "2025-12-30T07:14:30.793Z",
+  "commit": "d7df03b4756df708fc13db177e5f84c4d330f2eb",
+  "generated": "2025-12-30T07:14:48.188Z",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "",
-        "hash": "2859445425",
+        "commit": "d7df03b4756df708fc13db177e5f84c4d330f2eb",
+        "hash": "1311047513",
         "path": "content/docs/introduction-web3-indonesia.mdx"
       },
       "author": {
@@ -13,7 +13,7 @@
         "picture": "https://avatars.githubusercontent.com/u/76843145?v=4"
       },
       "collection": "docs",
-      "publishedAt": "2025-12-30T07:46:17.043Z",
+      "publishedAt": "2023-04-12T17:00:00.000Z",
       "slug": "introduction-web3-indonesia",
       "status": "published",
       "title": "Introduction Web3 Indonesia"

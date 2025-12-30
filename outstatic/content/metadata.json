@@ -1,10 +1,10 @@
 {
-  "commit": "d7df03b4756df708fc13db177e5f84c4d330f2eb",
-  "generated": "2025-12-30T07:14:48.188Z",
+  "commit": "",
+  "generated": "Tue, 30 Dec 2025 07:29:26 GMT",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "d7df03b4756df708fc13db177e5f84c4d330f2eb",
+        "commit": "38a94683388b116d2bb0df32691291c5c0ecf5ba",
         "hash": "1311047513",
         "path": "content/docs/introduction-web3-indonesia.mdx"
       },

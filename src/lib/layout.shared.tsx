@@ -1,9 +1,10 @@
 import type { BaseLayoutProps, LinkItemType } from 'fumadocs-ui/layouts/shared'
-import { RssIcon } from 'lucide-react'
 import Image from 'next/image'
 import { ThemeToggle } from '@/components/theme-toggle'
 
+
 export const title = 'Web3IDN'
+
 
 export const logo = (
   <>
@@ -21,11 +22,19 @@ export const logo = (
 
 export const linkItems: LinkItemType[] = [
   {
-    type: 'icon',
-    url: '/rss.xml',
-    text: 'RSS',
-    icon: <RssIcon />,
-    external: true,
+    text: 'Blog',
+    url: '/blog',
+    active: 'nested-url',
+  },
+  {
+    text: 'Docs',
+    url: '/docs',
+    active: 'nested-url',
+  },
+  {
+    text: 'Learn',
+    url: '/learn',
+    active: 'nested-url',
   },
   {
     type: 'icon',
@@ -38,6 +47,14 @@ export const linkItems: LinkItemType[] = [
     ),
     external: true,
   },
+  {
+      type: 'custom',
+      component: (
+          <a href="/connect" className="bg-white text-black px-4 py-1.5 rounded-md text-sm font-medium hover:bg-gray-200 transition-colors">
+              Connect
+          </a>
+      )
+  }
 ]
 
 /**

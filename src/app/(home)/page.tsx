@@ -1,96 +1,67 @@
-import { BookIcon, type LucideIcon, WebhookIcon } from 'lucide-react'
-import type { LinkProps } from 'next/link'
 import Link from 'next/link'
-import type { ReactElement, ReactNode } from 'react'
-import { cn } from '@/lib/cn'
+import type { ReactElement } from 'react'
 
-export default function DocsPage(): ReactElement {
+export default function HomePage(): ReactElement {
   return (
-    <main className='mx-auto flex w-full max-w-[1400px] flex-col px-4 py-16'>
-      <h1 className='font-semibold text-2xl md:text-3xl'>Fumadocs Starter</h1>
-      <p className='mt-1 text-fd-muted-foreground text-lg'>
-        A starter-template for Fumadocs.
-      </p>
+    <main className='flex min-h-screen flex-col items-center justify-center bg-black text-white px-4 py-16 text-center overflow-hidden'>
+      {/* Hero Section */}
+      <div className='relative z-10 flex flex-col items-center justify-center pt-20 pb-16'>
+        <h1 className='text-8xl font-bold tracking-tighter md:text-9xl'>
+          W<span className='text-blue-500'>3</span>IDN
+        </h1>
+        <p className='mt-6 max-w-2xl text-lg text-gray-400 md:text-xl'>
+          Advancing blockchain education, research, resources and development Web3 Indonesia.
+        </p>
 
-      <div className='mt-8 grid grid-cols-1 gap-4 text-left md:grid-cols-2'>
-        <DocumentationItem
-          description='Get started with the Fumadocs framework.'
-          href='/docs'
-          icon={{ icon: BookIcon, id: '(index)' }}
-          title='Documentation'
-        />
+        <div className='mt-10 flex flex-wrap justify-center gap-6'>
+          <Link
+            href='/blog'
+            className='rounded-md border border-green-400 bg-transparent px-8 py-2 text-lg font-medium text-white shadow-[0_0_15px_rgba(74,222,128,0.5)] transition-transform hover:scale-105 hover:shadow-[0_0_25px_rgba(74,222,128,0.7)]'
+          >
+            Blog
+          </Link>
+          <Link
+            href='/docs'
+            className='rounded-md border border-green-400 bg-transparent px-8 py-2 text-lg font-medium text-white shadow-[0_0_15px_rgba(74,222,128,0.5)] transition-transform hover:scale-105 hover:shadow-[0_0_25px_rgba(74,222,128,0.7)]'
+          >
+            Docs
+          </Link>
+          <Link
+            href='/learn'
+            className='rounded-md border border-green-400 bg-transparent px-8 py-2 text-lg font-medium text-white shadow-[0_0_15px_rgba(74,222,128,0.5)] transition-transform hover:scale-105 hover:shadow-[0_0_25px_rgba(74,222,128,0.7)]'
+          >
+            Learn
+          </Link>
+        </div>
+      </div>
 
-        <DocumentationItem
-          description="Get started with Fumadocs's API reference feature."
-          href='/docs/api-reference'
-          icon={{ icon: WebhookIcon, id: 'api-reference' }}
-          title='API Reference'
-        />
+      {/* Hero Glow Effect Background */}
+      <div className='absolute top-1/2 left-1/2 -z-0 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/20 blur-[120px]' />
+
+      {/* Family & Community Section */}
+      <div className='mt-32 w-full'>
+        <h2 className='text-center text-xl font-medium text-gray-400'>Family & Community</h2>
+        <div className='mt-8 flex flex-wrap items-center justify-center gap-8 md:gap-16'>
+            <span className='text-lg font-bold text-white'>BlockdevID</span>
+            <span className='text-lg font-bold text-white'>CoindeskID</span>
+            <span className='text-lg font-bold text-white'>Coinvestasi</span>
+            <span className='text-lg font-bold text-white'>AirdropFinder</span>
+            <span className='text-lg font-bold text-white'>Cryptoiz</span>
+        </div>
+      </div>
+
+      {/* Bottom CTA Section */}
+      <div className='mt-32 pb-20'>
+        <h2 className='text-5xl font-bold md:text-6xl'>
+          Mau belajar <br />
+          <span className='bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent'>Web3</span> & Crypto?
+        </h2>
+        <p className='mt-6 max-w-2xl text-gray-400 text-lg mx-auto'>
+          Belajar bersama kami, berkembang dan bertumbuh bersama
+          <br />
+          Learning, Improving, Envolving and Building Together!
+        </p>
       </div>
     </main>
-  )
-}
-
-function DocumentationItem({
-  title,
-  description,
-  icon: { icon: ItemIcon, id },
-  href,
-}: {
-  title: string
-  description: string
-  icon: {
-    icon: LucideIcon
-    id: string
-  }
-  href: string
-}): ReactElement {
-  return (
-    <Item href={href}>
-      <Icon className={id}>
-        <ItemIcon className='size-full' />
-      </Icon>
-      <h2 className='mb-2 font-semibold text-lg'>{title}</h2>
-      <p className='text-fd-muted-foreground text-sm'>{description}</p>
-    </Item>
-  )
-}
-
-function Icon({
-  className,
-  children,
-}: {
-  className?: string
-  children: ReactNode
-}): ReactElement {
-  return (
-    <div
-      className={cn(
-        'mb-2 size-9 rounded-lg border p-1.5 shadow-fd-primary/30',
-        className
-      )}
-      style={{
-        boxShadow: 'inset 0px 8px 8px 0px var(--tw-shadow-color)',
-      }}
-    >
-      {children}
-    </div>
-  )
-}
-
-function Item(
-  props: LinkProps & { className?: string; children: ReactNode }
-): ReactElement {
-  const { className, children, ...rest } = props
-  return (
-    <Link
-      {...rest}
-      className={cn(
-        'rounded-2xl border border-border bg-fd-accent/30 p-6 shadow-lg backdrop-blur-lg transition-all hover:bg-fd-accent',
-        className
-      )}
-    >
-      {children}
-    </Link>
   )
 }

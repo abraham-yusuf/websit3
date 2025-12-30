@@ -2,7 +2,9 @@ import type { BaseLayoutProps, LinkItemType } from 'fumadocs-ui/layouts/shared'
 import Image from 'next/image'
 import { ThemeToggle } from '@/components/theme-toggle'
 
-export const title = 'W3IDN'
+
+export const title = 'Web3IDN'
+
 
 export const logo = (
   <>
@@ -36,7 +38,7 @@ export const linkItems: LinkItemType[] = [
   },
   {
     type: 'icon',
-    url: 'https://github.com/techwithanirudh/fumadocs-starter',
+    url: 'https://github.com/abraham-yusuf/websit3',
     text: 'Github',
     icon: (
       <svg fill='currentColor' role='img' viewBox='0 0 24 24'>

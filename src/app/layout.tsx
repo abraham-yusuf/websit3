@@ -11,6 +11,7 @@ import { TreeContextProvider } from 'fumadocs-ui/contexts/tree'
 import { source } from '@/lib/source'
 import { url } from '@/lib/url'
 
+
 const geist = Geist({
   variable: '--font-sans',
   subsets: ['latin'],
@@ -23,10 +24,10 @@ const mono = Geist_Mono({
 
 export const metadata = createMetadata({
   title: {
-    template: '%s | Starter Kit',
-    default: 'Starter Kit',
+    template: '%s | Web3IDN',
+    default: 'Web3IDN',
   },
-  description: 'The Next.js framework for building documentation sites',
+  description: 'Advancing blockchain education, research, resources and development Web3 Indonesia',
   metadataBase: baseUrl,
   alternates: {
     types: {

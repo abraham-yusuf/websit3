@@ -1,11 +1,11 @@
 {
-  "commit": "",
-  "generated": "2026-01-19T11:02:28.180Z",
+  "commit": "6430ba7dba2ea45d7a092727b3b82f5b17a24f74",
+  "generated": "2026-01-19T11:02:50.985Z",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "",
-        "hash": "3925529408",
+        "commit": "6430ba7dba2ea45d7a092727b3b82f5b17a24f74",
+        "hash": "4093899508",
         "path": "outstatic/content/docs/intro-web3idn.mdx"
       },
       "author": {
@@ -13,7 +13,7 @@
         "picture": "https://avatars.githubusercontent.com/u/76843145?v=4"
       },
       "collection": "docs",
-      "publishedAt": "2026-01-19T11:42:14.956Z",
+      "publishedAt": "2019-12-31T17:00:00.000Z",
       "slug": "intro-web3idn",
       "status": "published",
       "title": "Intro Web3IDN"
